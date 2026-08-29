@@ -15,10 +15,10 @@ export const STORE_CONTACT: StoreContact = {
     landmark: 'Opposite/Adjacent to AVK College for Women & Tennis Court Complex',
   },
   phoneNumbers: {
-    primary: '+91 94801 23456',
-    secondary: '+91 81922 34567',
-    formattedPrimary: '+919480123456',
-    formattedSecondary: '+918192234567',
+    primary: '+91 98807 44487',
+    secondary: '+91 86602 80677',
+    formattedPrimary: '+919880744487',
+    formattedSecondary: '+918660280677',
   },
   email: 'contact@shreerenukabooks.com',
   timings: {
@@ -29,7 +29,7 @@ export const STORE_CONTACT: StoreContact = {
   deliveryInfo: {
     davangereCoverage: 'Same-day home delivery across all Davangere areas including PJ Extension, MCC A & B Block, Vidyanagar, KB Extension, Nituvalli, Shamnur Road, and Anjaneya Badavane.',
     outstationDelivery: 'Fast parcel/courier dispatch across all taluks of Davangere (Harihar, Channagiri, Honnali, Jagalur, Harapanahalli) and across Karnataka.',
-    orderCallNotice: 'To order or book a delivery, please call +91 94801 23456 with your book list or stationery requirements. We will pack and dispatch your order promptly!',
+    orderCallNotice: 'To order or book a delivery, please call +91 98807 44487 or +91 86602 80677 with your book list or stationery requirements. We will pack and dispatch your order promptly!',
   },
   googleMapsUrl: 'https://maps.google.com/?q=AVK+College+Road+PJ+Extension+Davangere+Karnataka+577004',
   googleMapsEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.3850125867493!2d75.9207863!3d14.4627192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bba2574041b3127%3A0xb35a09c256cae758!2sAVK%20College%20Rd%2C%20PJ%20Extension%2C%20Davanagere%2C%20Karnataka%20577004!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin',

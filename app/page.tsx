@@ -107,21 +107,29 @@ export default function HomePage() {
           </div>
 
           {/* Action CTAs */}
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-3.5">
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
             <a
               href={`tel:${STORE_CONTACT.phoneNumbers.formattedPrimary}`}
-              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 border border-emerald-400/40 shadow-xl shadow-emerald-600/30 transition-all hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 border border-emerald-400/40 shadow-lg shadow-emerald-600/30 transition-all hover:-translate-y-0.5"
             >
-              <PhoneCall className="w-5 h-5 animate-bounce" />
-              <span>Call to Order: {STORE_CONTACT.phoneNumbers.primary}</span>
+              <PhoneCall className="w-4 h-4 animate-bounce" />
+              <span>Call: {STORE_CONTACT.phoneNumbers.primary}</span>
+            </a>
+
+            <a
+              href={`tel:${STORE_CONTACT.phoneNumbers.formattedSecondary}`}
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 border border-sky-400/40 shadow-lg shadow-sky-600/30 transition-all hover:-translate-y-0.5"
+            >
+              <PhoneCall className="w-4 h-4" />
+              <span>Call: {STORE_CONTACT.phoneNumbers.secondary}</span>
             </a>
 
             <Link
               href="/books?filter=new-arrivals"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base text-slate-200 bg-white/10 hover:bg-white/20 border border-white/15 backdrop-blur-md transition-all hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-bold text-xs sm:text-sm text-slate-200 bg-white/10 hover:bg-white/20 border border-white/15 backdrop-blur-md transition-all hover:-translate-y-0.5"
             >
               <Sparkles className="w-4 h-4 text-amber-400" />
-              <span>Explore New Arrivals</span>
+              <span>New Arrivals</span>
             </Link>
           </div>
         </div>

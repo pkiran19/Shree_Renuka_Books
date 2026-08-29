@@ -43,15 +43,43 @@ export default function AboutPage() {
         </p>
       </section>
 
-      {/* 2. Story & Store Context */}
+      {/* 2. Story & Store Owner Spotlight */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        {/* Real Store & Owner Image */}
+        <div className="space-y-4">
+          <div className="relative w-full h-[450px] sm:h-[500px] rounded-3xl overflow-hidden border border-white/20 shadow-2xl bg-slate-900">
+            <Image
+              src="/images/owner.jpg"
+              alt="Shree Renuka Book House Store Owner in Davangere"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-top hover:scale-102 transition-transform duration-500"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+            
+            <div className="absolute bottom-4 inset-x-4 p-4 rounded-2xl bg-slate-950/80 backdrop-blur-md border border-white/15 text-xs text-slate-200 space-y-1">
+              <div className="flex items-center justify-between">
+                <strong className="text-sm text-white">Shree Renuka Book House</strong>
+                <span className="text-[11px] text-emerald-400 font-semibold px-2 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400/30">
+                  Davangere Store
+                </span>
+              </div>
+              <p className="text-slate-300 text-[11px]">
+                Shop 5, Tennis Court Complex, AVK College Road, PJ Extension, Davangere
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Text Story */}
         <div className="space-y-5">
           <div className="space-y-2">
             <span className="text-xs font-bold text-amber-400 uppercase tracking-wider block">
-              Our Journey
+              Our Legacy
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-              Rooted in the Heritage of Davangere
+              Personalized Service & Trust in Davangere
             </h2>
           </div>
 
@@ -60,12 +88,38 @@ export default function AboutPage() {
           </p>
 
           <p className="text-sm text-slate-300 leading-relaxed">
-            Over the years, we have become the go-to academic bookstore for students from <strong>AVK College for Women, B.I.E.T. Engineering College, G.M. Institute of Technology (GMIT), Davangere University, JJM Medical College, and DRM Science College</strong>.
+            Over the years, we have become the trusted academic bookstore for students from <strong>AVK College for Women, B.I.E.T. Engineering College, G.M. Institute of Technology (GMIT), Davangere University, JJM Medical College, and DRM Science College</strong>.
           </p>
 
-          <p className="text-sm text-slate-300 leading-relaxed">
-            Simultaneously, we take immense pride in promoting <strong>Kannada Sahitya</strong>, maintaining an extensive collection of works by legendary authors like Kuvempu, Poornachandra Tejaswi, Da Ra Bendre, S.L. Bhyrappa, and modern Kannada thinkers.
-          </p>
+          {/* Contact Direct Numbers Card */}
+          <div className="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-3">
+            <h4 className="text-xs font-bold text-sky-300 uppercase tracking-wider">
+              Direct In-Store Assistance & Delivery
+            </h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <a
+                href={`tel:${STORE_CONTACT.phoneNumbers.formattedPrimary}`}
+                className="p-3 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-400/30 flex items-center gap-2.5 transition-colors"
+              >
+                <PhoneCall className="w-4 h-4 text-emerald-400 shrink-0" />
+                <div>
+                  <span className="text-[10px] text-slate-400 block">Primary Mobile</span>
+                  <span className="font-bold text-white">{STORE_CONTACT.phoneNumbers.primary}</span>
+                </div>
+              </a>
+
+              <a
+                href={`tel:${STORE_CONTACT.phoneNumbers.formattedSecondary}`}
+                className="p-3 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 border border-sky-400/30 flex items-center gap-2.5 transition-colors"
+              >
+                <PhoneCall className="w-4 h-4 text-sky-400 shrink-0" />
+                <div>
+                  <span className="text-[10px] text-slate-400 block">Alternative Mobile</span>
+                  <span className="font-bold text-white">{STORE_CONTACT.phoneNumbers.secondary}</span>
+                </div>
+              </a>
+            </div>
+          </div>
 
           <div className="pt-2 flex flex-wrap gap-4 text-xs font-semibold text-slate-200">
             <div className="flex items-center gap-1.5">
@@ -74,50 +128,13 @@ export default function AboutPage() {
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              <span>Prescribed College Textbooks</span>
+              <span>Prescribed Textbooks</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              <span>Direct Phone Ordering</span>
+              <span>Doorstep Davangere Delivery</span>
             </div>
           </div>
-        </div>
-
-        {/* Visual Glass Showcase */}
-        <div className="relative">
-          <GlassCard className="p-8 space-y-6 border-sky-500/30 bg-gradient-to-br from-slate-900/90 via-sky-950/40 to-slate-900/90" glow="blue">
-            <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-sky-500/20 border border-sky-400/30 flex items-center justify-center text-sky-400">
-                <MapPin className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold text-white">Our Davangere Address</h3>
-              <p className="text-sm text-slate-300 leading-relaxed">
-                <strong>Shop 5, Tennis Court Complex</strong><br />
-                AVK College Road, Prince Jayachamaraja Wodeyar (PJ Extension),<br />
-                Davangere, Karnataka 577004
-              </p>
-              <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-xs text-slate-300 space-y-1">
-                <span className="font-semibold text-amber-400 block">Landmarks:</span>
-                <p>Opposite AVK College for Women, near PJ Extension Police Station & Tennis Court Complex.</p>
-              </div>
-            </div>
-
-            <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div>
-                <span className="text-xs text-slate-400 block">Orders & Deliveries</span>
-                <span className="text-base font-bold text-emerald-400">
-                  {STORE_CONTACT.phoneNumbers.primary}
-                </span>
-              </div>
-              <a
-                href={`tel:${STORE_CONTACT.phoneNumbers.formattedPrimary}`}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 border border-emerald-400/40 shadow-lg shadow-emerald-600/30 transition-all"
-              >
-                <PhoneCall className="w-4 h-4" />
-                <span>Call Store</span>
-              </a>
-            </div>
-          </GlassCard>
         </div>
       </section>
 
@@ -188,15 +205,16 @@ export default function AboutPage() {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 border border-emerald-400/40 shadow-lg shadow-emerald-600/30 transition-all"
             >
               <PhoneCall className="w-4 h-4" />
-              <span>Call for Bulk Supply: {STORE_CONTACT.phoneNumbers.primary}</span>
+              <span>Call: {STORE_CONTACT.phoneNumbers.primary}</span>
             </a>
 
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-slate-200 bg-white/10 hover:bg-white/15 border border-white/15 transition-all"
+            <a
+              href={`tel:${STORE_CONTACT.phoneNumbers.formattedSecondary}`}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 border border-sky-400/40 shadow-lg shadow-sky-600/30 transition-all"
             >
-              <span>Contact Store Location</span>
-            </Link>
+              <PhoneCall className="w-4 h-4" />
+              <span>Call: {STORE_CONTACT.phoneNumbers.secondary}</span>
+            </a>
           </div>
         </GlassCard>
       </section>

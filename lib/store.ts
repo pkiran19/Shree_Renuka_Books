@@ -1,7 +1,7 @@
 import { Item } from './types';
 import { INITIAL_ITEMS } from './initial-data';
 
-const STORAGE_KEY = 'shree_renuka_bookstore_inventory_v1';
+const STORAGE_KEY = 'shree_renuka_bookstore_inventory_v2';
 const EVENT_NAME = 'shree_renuka_inventory_changed';
 
 // In-memory fallback for server-side rendering or initial hydration
