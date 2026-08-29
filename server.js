@@ -1,10 +1,13 @@
+process.env.WATCHPACK_POLLING = 'true';
+process.env.CHOKIDAR_USEPOLLING = 'true';
+
 const { createServer } = require('http');
 const { parse } = require('url');
 const next = require('next');
 
 const port = parseInt(process.env.PORT || '3005', 10);
 const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dev, hostname: '0.0.0.0', port });
+const app = next({ dev, turbo: false, hostname: '0.0.0.0', port });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
