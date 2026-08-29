@@ -1,3 +1,4 @@
+
 # Shree Renuka Book House & Stationery Hub - Davangere, Karnataka
 
 A modern, highly modular, and scalable bookstore & stationery web application tailored for **Davangere, Karnataka**, featuring a **top-notch glassmorphic design**, an **intuitive admin portal for managing New Arrivals**, and **direct telephone ordering and delivery booking**.
@@ -72,3 +73,6 @@ node node_modules/next/dist/bin/next dev
 node node_modules/next/dist/bin/next build
 ```
 Admin Access PIN: `admin123`
+=======
+# Shree_Renuka_Books
+>>>>>>> 71e0df6ed4a58d7769241cf3e61434f2bc968812
