@@ -163,6 +163,73 @@ export default function HomePage() {
         <DeliveryNoticeCard />
       </section>
 
+      {/* 2.5 STORE & OWNER SPOTLIGHT */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-3xl glass-panel border-white/15 p-6 sm:p-8 bg-gradient-to-br from-slate-900/90 via-sky-950/40 to-slate-900/90">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            {/* Owner Photo */}
+            <div className="md:col-span-4 flex justify-center">
+              <div className="relative w-full max-w-[280px] h-[340px] rounded-2xl overflow-hidden border-2 border-sky-400/40 shadow-2xl group">
+                <Image
+                  src="/images/owner.jpg"
+                  alt="Shree Renuka Book House Store Owner inside Davangere Shop"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 300px"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+                <div className="absolute bottom-3 inset-x-3 text-center p-2 rounded-xl bg-slate-950/85 backdrop-blur-md border border-white/10">
+                  <p className="text-xs font-bold text-white">Shree Renuka Book House</p>
+                  <p className="text-[10px] text-emerald-400 font-medium">Shop 5, Tennis Court Complex, Davangere</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Details & Direct Assistance */}
+            <div className="md:col-span-8 space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs font-semibold">
+                <ShieldCheck className="w-3.5 h-3.5" />
+                <span>Davangere’s Trusted Local Book & Stationery Shop</span>
+              </div>
+
+              <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                Direct Assistance & Doorstep Delivery Across Davangere
+              </h2>
+
+              <p className="text-sm text-slate-300 leading-relaxed">
+                Looking for semester textbooks for <strong>AVK College, BIET, GMIT, Davangere University, JJMMC</strong>, competitive exam guides (KPSC/FDA/SDA), or engineering stationery? Call us directly and we will keep your books ready or dispatch them straight to your home.
+              </p>
+
+              {/* Direct Call & Info Buttons */}
+              <div className="pt-2 flex flex-wrap gap-3">
+                <a
+                  href={`tel:${STORE_CONTACT.phoneNumbers.formattedPrimary}`}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 border border-emerald-400/40 shadow-lg shadow-emerald-600/30 transition-all"
+                >
+                  <PhoneCall className="w-4 h-4" />
+                  <span>Call: {STORE_CONTACT.phoneNumbers.primary}</span>
+                </a>
+
+                <a
+                  href={`tel:${STORE_CONTACT.phoneNumbers.formattedSecondary}`}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 border border-sky-400/40 shadow-lg shadow-sky-600/30 transition-all"
+                >
+                  <PhoneCall className="w-4 h-4" />
+                  <span>Call: {STORE_CONTACT.phoneNumbers.secondary}</span>
+                </a>
+
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm text-slate-300 bg-white/10 hover:bg-white/15 border border-white/15 transition-all"
+                >
+                  <span>About Our Store &rarr;</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 3. NEW ARRIVALS SHOWCASE */}
       <section id="new-arrivals" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">

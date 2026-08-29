@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import {
   MapPin,
   PhoneCall,
@@ -12,6 +13,7 @@ import {
   ExternalLink,
   BookOpen,
   Layers,
+  ShieldCheck,
 } from 'lucide-react';
 import { STORE_CONTACT } from '@/lib/initial-data';
 import { GlassCard } from '@/components/ui/GlassCard';
@@ -55,6 +57,27 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Contact Info Cards (Left 1 Col) */}
         <div className="space-y-4 lg:col-span-1">
+          {/* Storefront & Owner Photo Card */}
+          <div className="relative w-full h-64 rounded-2xl overflow-hidden border border-white/20 shadow-xl bg-slate-900">
+            <Image
+              src="/images/owner.jpg"
+              alt="Shree Renuka Book House Store Owner inside Davangere Shop"
+              fill
+              sizes="(max-width: 1024px) 100vw, 33vw"
+              className="object-cover object-top hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+            <div className="absolute bottom-3 inset-x-3 p-2.5 rounded-xl bg-slate-950/85 backdrop-blur-md border border-white/10 text-xs">
+              <div className="flex items-center justify-between">
+                <span className="font-bold text-white">Shree Renuka Book House</span>
+                <span className="text-[10px] text-emerald-400 font-semibold px-2 py-0.5 rounded-full bg-emerald-500/20">
+                  Open Today
+                </span>
+              </div>
+              <p className="text-[10px] text-slate-300 mt-0.5">Shop 5, Tennis Court Complex, PJ Extension</p>
+            </div>
+          </div>
+
           {/* Address Card */}
           <GlassCard className="p-6 space-y-3 border-white/10" glow="blue">
             <div className="w-10 h-10 rounded-xl bg-sky-500/20 border border-sky-400/30 flex items-center justify-center text-sky-400">
