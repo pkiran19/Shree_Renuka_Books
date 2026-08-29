@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import ownerPhoto from './owner.jpg';
 import {
   BookOpen,
   MapPin,
@@ -47,18 +48,19 @@ export default function AboutPage() {
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* Real Store & Owner Image */}
         <div className="space-y-4">
-          <div className="relative w-full h-[450px] sm:h-[500px] rounded-3xl overflow-hidden border border-white/20 shadow-2xl bg-slate-900">
+          <div className="relative w-full h-[460px] sm:h-[520px] rounded-3xl overflow-hidden border-2 border-sky-400/30 shadow-2xl bg-slate-900">
             <Image
-              src="/images/owner.jpg"
-              alt="Shree Renuka Book House Store Owner in Davangere"
+              src={ownerPhoto}
+              alt="Shree Renuka Book House Store Owner inside Davangere Shop"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-top hover:scale-102 transition-transform duration-500"
               priority
+              placeholder="blur"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
             
-            <div className="absolute bottom-4 inset-x-4 p-4 rounded-2xl bg-slate-950/80 backdrop-blur-md border border-white/15 text-xs text-slate-200 space-y-1">
+            <div className="absolute bottom-4 inset-x-4 p-4 rounded-2xl bg-slate-950/85 backdrop-blur-md border border-white/15 text-xs text-slate-200 space-y-1">
               <div className="flex items-center justify-between">
                 <strong className="text-sm text-white">Shree Renuka Book House</strong>
                 <span className="text-[11px] text-emerald-400 font-semibold px-2 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400/30">
